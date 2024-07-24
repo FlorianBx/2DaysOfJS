@@ -1,4 +1,4 @@
-### Exercice 8 : Fetch API et async/await**
+## Exercice 8 : Fetch API et async/await
 **Objectif :** Apprendre à faire des requêtes HTTP en utilisant `fetch` avec `async/await`.
 <br><br>
 1. Définis une fonction nommée `fetchUsers` en utilisant la syntaxe `async`.
