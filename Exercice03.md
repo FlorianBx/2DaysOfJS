@@ -1,4 +1,4 @@
-### Exercice 3 : Boucles
+## Exercice 3 : Boucles
 **Objectif :** Comprendre comment fonctionnent les boucles `for` et `while`.
 <br><br>
 1. Déclare une variable `count` initialisée à `0`.
