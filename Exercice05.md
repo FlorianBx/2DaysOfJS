@@ -1,4 +1,4 @@
-### Exercice 5 : Modifications du DOM
+## Exercice 5 : Modifications du DOM
 **Objectif :** Apprendre à modifier le DOM.
 <br><br>
 1. Créer un fichier index.html, et script.js
