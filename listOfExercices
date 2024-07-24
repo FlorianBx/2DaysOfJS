@@ -1,0 +1,124 @@
+
+
+# MEMO V-0.3
+
+1. Récupérer les données des utilisateurs depuis l'API `https://jsonplaceholder.typicode.com/users`.
+2. Ajouter manuellement des âges et des salaires aux utilisateurs récupérés.
+3. Utiliser ces données pour les exercices suivants.
+
+Je vais ajuster les exercices en conséquence.
+
+### Jour 1 : Concepts de base
+
+#### Exercice 1 : Variables et types de données
+**Objectif :** Comprendre les variables, les types de données et les opérations de base.
+1. Déclare deux variables avec des nombres et une variable avec une chaîne de caractères.
+2. Fais des opérations basiques (addition, multiplication) avec les variables numériques.
+3. Concatène la chaîne de caractères avec un autre texte et affiche les résultats dans la console.
+
+#### Exercice 2 : Conditions
+**Objectif :** Apprendre à utiliser les structures conditionnelles.
+1. Déclare une variable `age` avec une valeur.
+2. Utilise une structure conditionnelle pour vérifier si `age` est supérieur ou égal à 18.
+3. Affiche un message dans la console en fonction du résultat de la condition (par exemple, "You are an adult." ou "You are a minor.").
+
+#### Exercice 3 : Boucles
+**Objectif :** Comprendre comment fonctionnent les boucles `for` et `while`.
+1. Crée une boucle `for` qui s'exécute 5 fois et affiche le numéro de l'itération dans la console.
+2. Crée une boucle `while` qui s'exécute tant qu'une variable `count` est inférieure à 5, et affiche la valeur de `count` dans la console à chaque itération.
+
+### Jour 2 : Concepts avancés
+
+#### Exercice 4 : Fonctions
+**Objectif :** Comprendre comment définir et utiliser des fonctions.
+1. Définis une fonction nommée `greet` qui prend un argument `name`.
+2. La fonction doit retourner un message de salutation (par exemple, "Hello, Alice").
+3. Appelle la fonction avec différents noms et affiche les résultats dans la console.
+
+#### Exercice 5 : Modifications du DOM
+**Objectif :** Apprendre à modifier le DOM.
+1. Ajoute un élément `<div>` avec l'id `myDiv` dans ton HTML.
+2. Écris du JavaScript pour changer le contenu textuel de cet élément en "Hello, World!".
+3. Change la couleur de fond de cet élément.
+
+#### Exercice 6 : Event Listeners
+**Objectif :** Comprendre et utiliser les event listeners.
+1. Ajoute un bouton avec l'id `myButton` dans ton HTML.
+2. Écris du JavaScript pour ajouter un event listener au bouton qui affiche une alerte avec le message "Button clicked!" lorsqu'il est cliqué.
+
+#### Exercice 7 : Callbacks
+**Objectif :** Introduire les callbacks en utilisant les temporisateurs.
+1. Définis une fonction `delayedGreeting` qui prend un nom et un callback en arguments.
+2. Utilise `setTimeout` pour appeler le callback après un délai de 2 secondes avec un message de salutation.
+3. Appelle `delayedGreeting` avec un nom et une fonction qui affiche le message dans la console.
+
+#### Exercice 8 : Promises
+**Objectif :** Comprendre les promesses avec un exemple simple.
+1. Crée une fonction `getNumber` qui retourne une promesse.
+2. La promesse doit générer un nombre aléatoire et se résoudre si le nombre est supérieur à 0.5, sinon elle doit se rejeter avec un message d'erreur.
+3. Utilise `.then` et `.catch` pour afficher le résultat ou l'erreur dans la console en fonction de la résolution de la promesse.
+
+### Jour 3 : API et méthodes de tableau
+
+#### Exercice 9 : Fetch API
+**Objectif :** Apprendre à faire des requêtes HTTP avec `fetch`.
+1. Utilise `fetch` pour faire une requête GET à l'URL `https://jsonplaceholder.typicode.com/users`.
+2. Parse la réponse en JSON.
+3. Ajoute manuellement des âges et des salaires aux utilisateurs récupérés.
+4. Affiche les données dans la console.
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(data => {
+        const users = data.map(user => ({
+            name: user.name,
+            age: Math.floor(Math.random() * 30) + 20, // Random age between 20 and 50
+            salary: Math.floor(Math.random() * 50000) + 30000 // Random salary between 30000 and 80000
+        }));
+        console.log(users);
+    })
+    .catch(error => console.error('Error:', error));
+```
+
+#### Exercice 10 : Utilisation de `map`
+**Objectif :** Apprendre à utiliser la méthode `map` pour transformer des données.
+1. Utilise les utilisateurs récupérés de l'API avec les âges et salaires ajoutés.
+2. Utilise la méthode `map` pour créer un nouveau tableau contenant uniquement les noms des utilisateurs.
+3. Affiche le nouveau tableau dans la console.
+
+#### Exercice 11 : Utilisation de `filter`
+**Objectif :** Apprendre à utiliser la méthode `filter` pour filtrer des données.
+1. Utilise le tableau d'utilisateurs précédemment déclaré.
+2. Utilise la méthode `filter` pour créer un nouveau tableau contenant uniquement les utilisateurs âgés de 18 ans et plus.
+3. Affiche le nouveau tableau dans la console.
+
+#### Exercice 12 : Utilisation de `reduce`
+**Objectif :** Apprendre à utiliser la méthode `reduce` pour agréger des données.
+1. Utilise le tableau d'utilisateurs précédemment déclaré.
+2. Utilise la méthode `reduce` pour calculer la moyenne des salaires de tous les utilisateurs.
+3. Affiche la moyenne dans la console.
+
+### Exemple de solutions pour les exercices 10 à 12 :
+
+#### Exercice 10 : Utilisation de `map`
+
+```javascript
+const names = users.map(user => user.name);
+console.log(names);
+```
+
+#### Exercice 11 : Utilisation de `filter`
+
+```javascript
+const adults = users.filter(user => user.age >= 18);
+console.log(adults);
+```
+
+#### Exercice 12 : Utilisation de `reduce`
+
+```javascript
+const totalSalary = users.reduce((total, user) => total + user.salary, 0);
+const averageSalary = totalSalary / users.length;
+console.log(averageSalary);
+```
