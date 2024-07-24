@@ -1,4 +1,4 @@
-### Exercice 01 : Variables et types de données
+## Exercice 01 : Variables et types de données
 **Objectif :** Comprendre les variables, les types de données et les opérations de base.
 
 1. Déclare deux variables avec des nombres (par exemple `numberOne` et `numberTwo`).
