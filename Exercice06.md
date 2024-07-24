@@ -1,4 +1,4 @@
-### Exercice 6 : Event Listeners
+## Exercice 6 : Event Listeners
 **Objectif :** Comprendre et utiliser les event listeners pour interagir avec le DOM.
 <br><br>
 1. Ajoute un bouton avec l'id `myButton` dans ton HTML.
