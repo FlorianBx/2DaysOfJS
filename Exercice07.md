@@ -1,4 +1,4 @@
-## Exercice 7 : Promises**
+## Exercice 7 : Promises
 **Objectif :** Comprendre les promesses avec un exemple simple.
 <br><br>
 1. Définis une fonction nommée `getNumber` qui retourne une promesse.
