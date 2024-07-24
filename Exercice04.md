@@ -1,4 +1,4 @@
-### Exercice 4 : Fonctions
+## Exercice 4 : Fonctions
 **Objectif :** Comprendre comment définir et utiliser des fonctions.
 <br /><br />
 1. Définis une fonction nommée `greet` qui prend un argument `name`.
