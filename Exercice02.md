@@ -1,4 +1,4 @@
-### Exercice 2 : Conditions
+## Exercice 2 : Conditions
 **Objectif :** Apprendre à utiliser les structures conditionnelles.
 <br><br>
 1. Déclare une variable `age` avec une valeur (par exemple, `30`).
